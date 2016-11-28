@@ -488,21 +488,6 @@ img#home_photo2 {
 	height: 400px;
 	visibility: hidden;
 }
-/*.skill_list_content b {*/
-	/*position: absolute;*/
-	/*top: 3%;*/
-	/*left: -11%;*/
-	/*width: 130%;*/
-	/*height: 40%;*/
-	/*background: #000;*/
-	/*opacity: 0;*/
-	/*-webkit-transition: opacity .2s ease-in-out;*/
-	/*transition: opacity .2s ease-in-out;*/
-	/*cursor: pointer;*/
-/*}*/
-/*.skill_list_content b:hover {*/
-	/*opacity: 0.4;*/
-/*}*/
 .skill_icon {
     cursor: pointer;
     background-size: 100%;
@@ -520,16 +505,16 @@ img#home_photo2 {
     transition : transform .25s;
 }
 #skill_icon1{
-    background: url(../image/rn.png) no-repeat ;
+    background: url(../image/sprite.png) -0px -0px no-repeat;
 }
 #skill_icon2{
-    background: url(../image/html.png) no-repeat ;
+    background: url(../image/sprite.png) -85px -0px no-repeat;
 }
 #skill_icon3{
-    background: url(../image/css.png) no-repeat ;
+    background: url(../image/sprite.png) -256px -0px no-repeat;
 }
 #skill_icon4{
-    background: url(../image/js.png) no-repeat ;
+    background: url(../image/sprite.png) -170px -0px no-repeat;
 }
 .skill_name {
 	text-align: center;

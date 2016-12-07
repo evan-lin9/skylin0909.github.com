@@ -174,11 +174,11 @@ aside a {
 	margin: 10px 0;
 	width: 20px;
 	height: 20px;
-	background: url(../image/aside_1.png) no-repeat center center;
+	background: url(../image/sprite.png) -575px -176px no-repeat;
 	border-radius: 50%;
 }
 aside a.selected {
-	background: url(../image/aside_2.png) no-repeat center center;
+	background: url(../image/sprite.png) -554px -176px no-repeat;
 }
 aside b {
 	position: absolute;
@@ -330,7 +330,6 @@ img#home_photo2 {
 	width: 80px;
 	height: 80px;
 	box-shadow: 0 0 0 4px rgba(255,255,255,1);
-	border-radius: 50%;
 	overflow: hidden;
 	color: #fff;
 	-webkit-transition: background 1s, color 1s, box-shadow 1s;
@@ -505,27 +504,29 @@ img#home_photo2 {
     transition : transform .25s;
 }
 #skill_icon1{
-    background: url(../image/sprite.png) -0px -0px no-repeat;
+    background: url(../image/sprite.png) -199px -370px no-repeat;
 }
 #skill_icon2{
-    background: url(../image/sprite.png) -85px -0px no-repeat;
+    background: url(../image/sprite.png) -284px -370px no-repeat;
 }
 #skill_icon3{
-    background: url(../image/sprite.png) -256px -0px no-repeat;
+    background: url(../image/sprite.png) -456px -370px no-repeat;
 }
 #skill_icon4{
-    background: url(../image/sprite.png) -170px -0px no-repeat;
+    background: url(../image/sprite.png) -370px -370px no-repeat;
 }
 .skill_name {
 	text-align: center;
 	width: 100%;
 	position: relative;
+	font-weight: bold;
+	color: white;
 }
 .skill_flag {
 	margin: 20px auto;
 	width: 20px;
 	height: 20px;
-	background: url(../image/skill_flag.png);
+	background:  url(../image/sprite.png) -529px -176px no-repeat;
 	-webkit-transition-duration: 1s;
 	transition-duration: 1s;
 }
@@ -664,14 +665,14 @@ img#home_photo2 {
 	float: left;
 	width: 1000px;
 	height: 320px;
-	background: url(../image/exp_list_bg.jpg);
+	background: url(../image/exp_list_bg1.jpg);
 	box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
 }
 .exp_list_left {
-	width:533px;
+	width:700px;
 }
 .exp_list dl {
-	margin-left: 140px;
+	margin-left: 210px;
 	margin-top: 36px;
 }
 .exp_list_first{
@@ -868,7 +869,7 @@ img#home_photo2 {
 #demo_info {
 	clear: both;
 	padding-top: 50px;
-	border-top: 1px solid #f00;
+	border-top: 1px solid #ccc;
 	width: 950px;
   	margin: 0 auto;
 }

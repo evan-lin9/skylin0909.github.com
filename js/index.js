@@ -173,15 +173,11 @@ $(function(){
 	$("#exp_list_slider").width($(".exp_list").width());
 	$("#exp_list_content").width($(".exp_list").width()*3);
 	$("#exp_list_slider_content").mouseenter(function(){
-		$("#exp_list_to").stop(true,false).fadeTo(700,1);
+	    $("#exp_list_to").stop(true,false).fadeTo(700,1);
 	}).mouseleave(function(){
 		$("#exp_list_to").stop(true,false).fadeTo(700,0.1);
 	});
 	var page=1;
-	$("#exp_timeline a").click(function(){
-		$("#exp_list_content").stop(true,false).animate({left:-$(".exp_list").width()*$(this).index()},2000,"easeInOutCubic");
-		page=$(this).index()+1;
-		});
 	$("#exp_list_toleft").click(function()
     {
 		if(!$("#exp_list_content").is(":animated")){
@@ -213,7 +209,7 @@ $(function(){
 			$("#contact_form").fadeIn(200);
 		})
 	});
-////内容适应居中
+// 内容适应居中
 	$(function(){
 		$("aside").css({"top":($(".active").height()-$("aside").height())/2});
 		$("#home_content").css({"padding-top":($(".active").height()-$("#home_content").height())/6});

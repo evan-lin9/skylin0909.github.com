@@ -1,358 +1,864 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>web前端开发简历</title>
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/component.css">
-</head> 
+<title>个人简历</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Resume Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript">
+	addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+	function hideURLbar() { window.scrollTo(0,1); };
+</script>
+<!-- //for-mobile-apps -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<!-- fonts -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Acme' rel='stylesheet' type='text/css'>
+<!-- //fonts -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<!-- skills -->
+<script src="js/pie-chart.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#demo-pie-1').pieChart({
+			barColor: '#10A7AF',
+			trackColor: '#fff',
+			lineCap: 'round',
+			lineWidth: 8,
+			onStep: function (from, to, percent) {
+				$(this.element).find('.pie-value').text(Math.round(percent) + '%');
+			}
+		});
+
+		$('#demo-pie-2').pieChart({
+			barColor: '#10A7AF',
+			trackColor: '#fff',
+			lineCap: 'butt',
+			lineWidth: 8,
+			onStep: function (from, to, percent) {
+				$(this.element).find('.pie-value').text(Math.round(percent) + '%');
+			}
+		});
+
+		$('#demo-pie-3').pieChart({
+			barColor: '#10A7AF',
+			trackColor: '#fff',
+			lineCap: 'square',
+			lineWidth: 8,
+			onStep: function (from, to, percent) {
+				$(this.element).find('.pie-value').text(Math.round(percent) + '%');
+			}
+		});
+
+		$('#demo-pie-4').pieChart({
+			barColor: '#10A7AF',
+			trackColor: '#fff',
+			lineCap: 'square',
+			lineWidth: 8,
+			onStep: function (from, to, percent) {
+				$(this.element).find('.pie-value').text(Math.round(percent) + '%');
+			}
+		});
+	});
+</script>
+<!-- skills -->
+</head>
 <body>
-<!-- header start -->
-<div id="header" style="opacity: 0.3;"></div>
-<header style="opacity: 1;">
-	<div id="logo">
-		<div id="header_img"><img src="image/logo.jpg" alt="" /></div>
-		<div id="header_p">
-			<p id="header_p1">林宏宇</p>
-			<p id="header_p2">个人简历</p>
-		</div>
-	</div>
-	<nav>
+<!-- header -->
+<div class="header-top">
+	<div class="container">
 		<ul>
-			<li><a href="">首页</a></li>
-			<li><a href="http://www.cnblogs.com/skylin0909/" target="blank">博客</a></li>
-			<li><a href="">爱好</a></li>
-			<li><a href="">更多</a></li>
+			<li><a class="scroll" href="#about"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>主页</a></li>
+			<li><a class="scroll" href="#emailme"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>联系我</a></li>
+			<li><a href="javascript:window.print()"><span class="glyphicon glyphicon-print" aria-hidden="true"></span>打印</a></li>
+			<li><a href="#portfolioModal9" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>My Photo</a></li>
 		</ul>
-	</nav>
-</header>
-<!-- header end -->	
-<!-- aside start -->
-<aside style="top: 241px; display: block;">
-		<a href="#page1"><b>首页</b></a>
-		<a href="#page2"><b>自我介绍</b></a>
-		<a href="#page3"><b>专业技能</b></a>
-		<a href="#page4"><b>学习经历</b></a>
-		<a href="#page5"><b>我的作品</b></a>
-		<a href="#page6"><b>联系我</b></a>
-</aside>
-<!-- aside end -->
-<!-- home page -->
-<div id="dowebok">
-	<!-- home -->
-	<div class="section one">
-		<div id="home">
-			<div id="home_content">
-				<div id="home_head">
-					<div id="home_head_content">
-						<img src="image/photo1.jpg" id="home_photo1" alt="" />
-						<img src="image/photo2.jpg" id="home_photo2" alt="" />
-					</div>
-				</div>
-				<div id="home_info">
-					<p id="home_info1">希望通过自己的努力成为一个对公司有所作为的人</p>
-					<div id="home_info_box">
-						<p id="home_info2">我叫林宏宇</p>
-						<p id="home_info3">今年23岁</p>
-						<p id="home_info4">一名机械专业的大学生</p>
-						<p id="home_info5">skylin930909@gmail.com</p>
-					</div>
-				</div>
+	</div>
+</div>	
+<div class="header">
+	<div class="container">
+		<div class="col-md-8 header-left">
+			<div class="col-sm-5 pro-pic">
+				<img class="img-responsive" src="images/pic1.jpg" alt=" "/>
 			</div>
-		</div>
-	</div>
-	<!-- home end -->
-	<!-- about -->
-	<div class="section two">
-		<div id="about">
-			<div id="about_content">
-				<div class="title">
-					<h1 style="color: white;">自我介绍</h1>
-				</div>
-				<div id="about_list_content">
-					<div class="about_list" id="about_list1">
-						<div class="about_list_eg" id="about_en_edu">education</div>
-						<div class="about_list_cn" id="about_cn_edu">学历<p>专科</p></div>
-					</div>
-                    <div class="about_list">
-                        <div class="about_list_eg" id="about_en_age">age</div>
-                        <div class="about_list_cn" id="about_cn_age">年龄<p>23岁</p></div>
-                    </div>
-                    <div class="about_list">
-                        <div class="about_list_eg" id="about_en_loc">location</div>
-                        <div class="about_list_cn" id="about_cn_loc">坐标<p>成都</p></div>
-                    </div>
-                    <div class="about_list">
-                        <div class="about_list_eg" id="about_en_sta">status</div>
-                        <div class="about_list_cn" id="about_cn_sta">状态<p>待业</p></div>
-                    </div>
-				</div>
-				<div id="about_info">
-					<p style="bottom: 0px;">2015年毕业于成都工业学院，今年4月开始自学前端。</p>
-					<p style="bottom: 0px;">常用编辑器Sublime Text3 和 WebStorm。</p>
-					<p style="bottom: 0px;">对新事物的接受能力较强，喜欢自己亲自尝试或者开发。</p>
-					<p style="bottom: 0px;">正在学习ReactJs中...</p>
-				</div>
+			<div class="col-sm-5 pro-text">
+				<h1>林宏宇</h1>
+				<p>front-end engineers</p>
 			</div>
+			<div class="clearfix"></div>
 		</div>
+		<div class="col-md-4 header-right ">
+			<ul class="list-left">
+				<li>Email:</li>
+				<li>Github:</li>
+				<li>Phone:</li>
+				<li>WeChat: </li>
+			</ul>
+			<ul class="list-right">
+				<li><a href="mailto:info@example.com">skylin930909@gmail.com</a></li>
+				<li><a href="mailto:info@example.com">github.com/SkyLin0909</a></li>
+				<li>187-2141-0594</li>
+				<li>l19930909</li>
+			</ul>
+			<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
 	</div>
-    <!-- about end -->
-    <!-- skill -->
-    <div class="section three">
-		<div id="skill">
-			<div id="skill_content">
-				<div class="title">
-					<h1 style="color: white;">专业技能</h1>
-				</div>
-				<div id="skill_info"></div>
-                <div id="skill_list">
-                    <div class="skill_list_content" id="skill_list1">
-                        <div class="skill_icon" id="skill_icon1"></div>
-                        <div class="skill_name">React.Js</div>
-                        <div class="skill_flag"></div>
-                        <div class="skill_int" id="skill_int1">
-                        	<ul>
-                        		<li>在vue/angular/react选择了最后一个框架。</li>
-                        		<li>目前正在看阮一峰的react教程。</li>
-                        	</ul>
-                        </div>
-                    </div>
-                    <div class="skill_list_content" id="skill_list2">
-                        <div class="skill_icon" id="skill_icon2"></div>
-                        <div class="skill_name">HTML</div>
-                        <div class="skill_flag"></div>
-                        <div class="skill_int" id="skill_int2">
-                        	<ul>
-                        		<li>代码符合W3C标准。</li>
-                        		<li>合理使用标签，符合语义化。</li>
-                        		<li>熟悉html5新定义的标签。</li>
-                        		<li>了解SVG和canvas。</li>
-                        	</ul>
-                        </div>
-                    </div>
-                    <div class="skill_list_content" id="skill_list3">
-                        <div class="skill_icon" id="skill_icon3"></div>
-                        <div class="skill_name">CSS</div>
-                        <div class="skill_flag"></div>
-                        <div class="skill_int" id="skill_int3">
-                        	<ul>
-                        		<li>熟悉div+css布局。</li>
-                        		<li>class类名清晰，有较强的整合样式能力。</li>
-                        		<li>了解bootstrap和响应式布局。</li>
-                        		<li>了解CSS3新加入的特性。</li>
-                        	</ul>
-                        </div>
-                    </div>
-                    <div class="skill_list_content" id="skill_list4">
-                        <div class="skill_icon" id="skill_icon4"></div>
-                        <div class="skill_name">JavaScript</div>
-                        <div class="skill_flag"></div>
-                        <div class="skill_int" id="skill_int4">
-                        	<ul>
-                        		<li>重视JavaScript原生代码。</li>
-                        		<li>善于思考使用更好的算法和逻辑实现特效。</li>
-                        		<li>掌握jQuery及其插件库。</li>
-                        		<li>努力学习ES6新语法。</li>
-                        	</ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- skill end -->
-    <!-- experience -->
-    <div class="section four section4">
-    	<div id="exp">
-        	<div id="exp_content">
-        		<div class="title">
-                	<h1>学习经历</h1>
-                </div>
-                <div id="exp_info" class="exp_scale"></div>
-                <div id="exp_list_slider">
-                	<div id="exp_list_slider_content" class="exp_scale">
-                        <div id="exp_list_content">
-                            <div class="exp_list">
-                                <div class="exp_list_left">
-                               		<div id="exp_list_left1">
-                                        <dl>
-                                            <dt>如何知道前端</dt>
-                                            <dd class="exp_list_time">2016年3月~~2016年6月</dd>
-                                            <dd>上海为梦科技有限公司运营专员（实习）.</dd>
-                                            <dd>在公司没有UI的情况下，第一次接触用PS切图.</dd>
-                                            <dd>开始了解web前端这一概念，html和CSS.</dd>
-                                            <dd>买了第一本书<b>《Head Firsr Html》</b>利用空闲时间学习.</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                        	</div>
-                        	<div class="exp_list">
-                                <div class="exp_list_left">
-                                	<div id="exp_list_left2">
-                                        <dl>
-                                            <dt>辞职自学前端</dt>
-                                            <dd class="exp_list_time">2016年6月~~2016年9月</dd>
-                                            <dd>开始在知乎，豆瓣，各大网站收集相关资料以及视频.</dd>
-                                            <dd>跟着‘传智播客’、‘千锋源’的案例自己写页面.</dd>
-                                            <dd>刚接触原生JS时，觉得很枯燥，很疑惑，有想过放弃.</dd>
-                                            <dd>第一次利用原生完成轮播特效，感到很高兴，决定坚持学习.</dd>
-                                        </dl>
-                                    </div>
-                            	</div>
-                        	</div>
-                            <div class="exp_list">
-                                <div class="exp_list_left">
-                                    <div id="exp_list_left3">
-                                        <dl>
-                                            <dt>系统性的学习（通过书籍）</dt>
-                                            <dd class="exp_list_time">2016年9月~~现在</dd>
-                                            <dd><b>《CSS权威指南》</b>加深了我对CSS这一语言的理解.</dd>
-                                            <dd><b>《DOM编程艺术</b>》和<b>《高级程序设计</b>》对原生语法和函数封装有更清晰的认知.</dd>
-                                            <dd><b>《锋利的jQuery</b>》和<b>《bootstrap实战》</b>明白了write less,do more.</dd>
-                                            <dd><b>《你不知道的JavaScript》</b>和<b>《编写高质量代码》</b>学习中...</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <div id="exp_list_to">
-                    	<div id="exp_list_toleft"><img src="image/exp_list_toleft.png" /></div>
-                    	<div id="exp_list_toright"><img src="image/exp_list_toright.png" /></div>
-                    </div>
-                    </div>             
-                </div>
-            </div>
-        </div>
-    </div> 
-    <!-- experience end -->
-    <!-- demo -->
-    <div class="section five section5">
-    	<div id="demo">
-        	<div id="demo_content">
-            	<div class="title">
-                	<h1>我的作品</h1>
-                </div>
-                <div id="demo_content_list">
-                    <ul class="demo_box">
-                    	<li class="demo_scale">
-                            <div class="demo_box_content">
-                            	<div class="demo_box_hover">
-                                    <p class="demo_box_title">DEMO:DOM编程艺术</p>
-                                    <span class="demo_box_hover_icon">
-                                        <a href="https://skylin0909.github.io/dom_javascript/" target="_blank" class="demo_box_link">
-                                            <img src="image/demo-link.png" alt="" />
-                                        </a>
-                                    </span>
-                                </div>
-                                <img src="image/demo_box1.jpg" alt="" class="demo_box_bg"/>
-                            </div>
-                        </li>
-                        <li class="demo_scale">
-                            <div class="demo_box_content">
-                                <div class="demo_box_hover">
-                                    <p class="demo_box_title">网页版2048</p>
-									<span class="demo_box_hover_icon">
-										<a href="https://skylin0909.github.io/2048/" target="_blank" class="demo_box_link">
-											<img src="image/demo-link.png" alt="" />
-										</a>
-									</span>
-								</div>
-								<img src="image/demo_box2.jpg" alt="" class="demo_box_bg"/>
-							</div>
-                        </li>
-                        <li class="demo_scale">
-							<div class="demo_box_content">
-                            	<div class="demo_box_hover">
-									<p class="demo_box_title">沙漏倒计时</p>
-                                    <span class="demo_box_hover_icon">
-                                    	<a href="https://skylin0909.github.io/contdown/" target="_blank" class="demo_box_link">
-											<img src="image/demo-link.png" alt="" />
-                                        </a>
-                                    </span>
-                                </div>
-								<img src="image/demo_box3.jpg" alt="" class="demo_box_bg"/>
-                            </div>
-                        </li>
-                        <li class="demo_scale">
-							<div class="demo_box_content">
-                            	<div class="demo_box_hover">
-                                	<p class="demo_box_title">roseonly仿写</p>
-                                    <span class="demo_box_hover_icon">
-                                    	<a href="https://skylin0909.github.io/roseonly/" target="_blank" class="demo_box_link">
-											<img src="image/demo-link.png" alt="" />
-                                        </a>
-                                    </span>
-                                </div>
-								<img src="image/demo_box4.jpg" alt="" class="demo_box_bg"/>
-                            </div>
-                        </li>
-                    </ul>
-				</div> 
-                <div id="demo_info" class="demo_scale">
-                    <p>这是我的部分demo。</p>
-                    <p>更多demo请移步<a href="https://github.com/SkyLin0909" target="blank" class="md-trigger" data-modal="modal-3">Github</a>。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- demo end -->
-    <!-- contact -->
-	<div class="section six section6">
-        <div id="contact">
-			<div id="contact_content">
-				<div class="title">
-					<h1>联系我</h1>
-				</div>
-                <div class=" more" title="3d动画">
-                        <div class="cube">
-                            <div class="font line"></div>
-                            <div class="back line"></div>
-                            <div class="left line"></div>
-                            <div class="right line"></div>
-                            <div class="top line"></div>
-                            <div class="bottom line"></div>
-                            <div class="act line"></div>
-                            <div class="ball row-one"></div>
-                            <div class="ball row-two"></div>
-                            <div class="ball row-three"></div>
-                            <div class="ball row-four"></div>
-                            <div class="ball row-five"></div>
-                            <div class="ball row-six"></div>
-                            <div class="ball column-one"></div>
-                            <div class="ball column-two"></div>
-                            <div class="ball column-three"></div>
-                            <div class="ball column-four"></div>
-                            <div class="ball column-five"></div>
-                            <div class="ball column-six"></div>
-                        </div>
-                </div>
-                <div id="contact_way">
-    					<div id="contact_message1" class="contact_message contact_scale">Contact Me</div>
-                        <div id="contact_form">
-                            手机号:18721410594<br/>
-                            微信号:l19930909<br/>
-                            邮  箱:470035056@qq.com<br/>
-                        </div>
-                </div>
-            </div>
-            <footer class="contact_scale">
-				<div class="contact_scale footer">
-                    <a href="http://www.cnblogs.com/skylin0909" target="_blank">CSDN</a>|
-                    <a href="http://weibo.com/3174960314" target="_blank">微博</a>|
-                    <a href="https://www.zhihu.com/people/lin-hong-yu-69" target="_blank">知乎</a>|
-                    <a href="https://segmentfault.com/u/linhongyu" target="_blank">豆瓣</a>|
-                    <a href="https://github.com/skylin0909" target="_blank">Github</a>
-                </div>
-			</footer>
-        </div>
-	</div>
-    <!-- contact end -->
 </div>
-<!-- home page end -->
-<script src="js/jquery-3.1.1.js"></script>
-<script src="js/jquery.easings.min.js"></script>
-<script src="js/jquery.fullPage.js"></script>
-<script src="js/index.js"></script>
+<!-- header-end -->
+
+<!-- about -->
+<div id="about" class="about">
+	<div class="container">
+		<h3 class="tittle">About Me</h3>
+		<p class="abt-para">2015年毕业于成都工业学院，在校期间自学前端，有幸大三找到了一份实习工作。
+			<br>常用编辑器Sublime Text3 和 WebStorm，对新事物的接受能力较强，喜欢自己亲自尝试。
+			<br>正在学习Vue.js2.0中...</p>
+	</div>
+	<div class="col-md-6 abt-left ">
+		<div class="accordion">
+			<div class="accordion-section">
+				<h5><a class="accordion-section-title" href="#accordion-1">
+					<span>学 &nbsp; &nbsp; &nbsp; &nbsp;历</span> 全日制专科
+				<div class="clearfix"></div>
+				</a></h5>
+			</div>
+			<div class="accordion-section">
+				<h5><a class="accordion-section-title" href="#accordion-2">
+					<span>专 &nbsp; &nbsp; &nbsp; &nbsp;业</span> 数控技术
+				<div class="clearfix"></div>
+				</a></h5>
+			</div>
+			<div class="accordion-section">
+				<h5><a class="accordion-section-title" href="#accordion-3">
+					<span>年 &nbsp; &nbsp; &nbsp; &nbsp;龄</span> 23
+				<div class="clearfix"></div>
+				</a></h5>
+			</div>
+			<div class="accordion-section">
+				<h5><a class="accordion-section-title" href="#accordion-4">
+					<span>工作年限</span> 2年
+					<div class="clearfix"></div>
+				</a></h5>
+			</div>
+			<div class="accordion-section">
+				<h5><a class="accordion-section-title" href="#accordion-4">
+					<span>目前状态</span> 已离职，可随时上岗
+					<div class="clearfix"></div>
+				</a></h5>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6 abt-right ">
+		<div class="col-sm-4 abt-gd-left text-center">
+			<div id="demo-pie-1" class="pie-title-center" data-percent="75"><span class="pie-value"></span></div>
+			<h4>HTML</h4>
+		</div>
+		<div class="col-sm-4 abt-gd-left text-center">		   
+			<div id="demo-pie-3" class="pie-title-center" data-percent="75"><span class="pie-value"></span></div>
+			<h4>CSS</h4>
+		</div>
+		<div class="col-sm-4 abt-gd-left text-center">		   
+			<div id="demo-pie-4" class="pie-title-center" data-percent="60"><span class="pie-value"></span></div>
+			<h4>JavaScript</h4>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<!-- about-end -->
+
+<!-- more skills -->
+<div class="more">
+	<div class="container">
+		<h3 class="tittle ">Skills</h3>
+		<div class="col-md-6 skill-left ">
+			<div class="progress">
+				<div class="progress-bar progress-bar-success" style="width: 30%">jQuery
+					<span class="sr-only">35% Complete (success)</span>
+				</div>
+				<div class="progress-bar progress-bar-warning " style="width: 50%">
+					<span class="sr-only"></span>
+				</div>
+				<p>80%</p>
+				<div class="clearfix"></div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-success1" style="width: 30%">Bootstrap
+					<span class="sr-only">35% Complete (success)</span>
+				</div>
+				<div class="progress-bar progress-bar-warning1" style="width: 40%">
+					<span class="sr-only"></span>
+				</div>
+				<p>70%</p>
+				<div class="clearfix"></div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-success3" style="width: 30%">Ajax
+					<span class="sr-only">35% Complete (success)</span>
+				</div>
+				<div class="progress-bar progress-bar-warning3 " style="width: 30%">
+					<span class="sr-only"></span>
+				</div>
+				<p>60%</p>
+				<div class="clearfix"></div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-success2" style="width: 30%">Less
+					<span class="sr-only">35% Complete (success)</span>
+				</div>
+				<div class="progress-bar progress-bar-warning2" style="width: 30%">
+					<span class="sr-only"></span>
+				</div>
+				<p>60%</p>
+				<div class="clearfix"></div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-success5" style="width: 30%">Git、webpack
+					<span class="sr-only">35% Complete (success)</span>
+				</div>
+				<div class="progress-bar progress-bar-warning5" style="width: 10%">
+					<span class="sr-only"></span>
+				</div>
+				<p>40%</p>
+				<div class="clearfix"></div>
+			</div>
+			<div class="progress no-marg">
+				<div class="progress-bar progress-bar-success4" style="width: 30%">Vue.js2.0、ES6
+					<span class="sr-only">35% Complete (success)</span>
+				</div>
+				<div class="progress-bar progress-bar-warning4" style="width: 20%">
+					<span class="sr-only"></span>
+				</div>
+				<p>50%</p>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="col-md-6 skill-right ">
+			<div class="scrollbar scrollbar1">
+				<div class="more-gds">
+					<div class="col-sm-3 more-left">
+						<span class="glyphicon glyphicon-scissors" aria-hidden="true"></span>
+					</div>
+					<div class="col-sm-9 more-right">
+						<h4>Design</h4>
+						<p>如果没有UI的情况下，可以临时兼任设计的活.略懂一点PhotoShop,会自己拼接雪碧图</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="more-gds yes_marg">
+					<div class="col-sm-9 more-right2">
+						<h4>移动端和native App</h4>
+						<p> 能用运用zepto和jq mobile轻量级库开发项目.但更喜欢采用原生JS开发，
+							能手写下托刷新，滚动等简单特效。
+							<br>努力学习Weex中
+						</p>
+					</div>
+					<div class="col-sm-3 more-left">
+						<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="more-gds yes_marg">
+					<div class="col-sm-3 more-left">
+						<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+					</div>
+					<div class="col-sm-9 more-right">
+						<h4>兼容性</h4>
+						<p>能够处理浏览器（ie9+、chrome、firefox）间的差异，解决开发中遇到的浏览器兼容性问题</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="more-gds yes_marg">
+					<div class="col-sm-9 more-right2">
+						<h4>提升计划</h4>
+						<p>希望能够在项目中运用vue.js“全家桶”做一个SPA应用，
+							也会努力学习一些后台和服务器知识，比如Node.js.</p>
+					</div>
+					<div class="col-sm-3 more-left">
+						<span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!-- more skills-end -->
+
+<!-- work experience -->
+<div class="employment">
+	<div class="container">
+		<h3 class="tittle ">Work Experience</h3>
+		<p class="abt-para "></p>
+		<div class="col-md-6 employ-left">
+			<h4>01</h4>
+		</div>
+		<div class="col-md-6 employ-right">
+			<h5><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>上海闻上科技</h5>
+			<p>2014.10--2015.02</p>
+		</div>
+		<div class="col-md-6 employ-left2">
+			<h5>成都淘企科技<span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span></h5>
+			<p>2015.07--2017.02</p>
+		</div>
+		<div class="col-md-6 employ-right2">
+			<h4>02</h4>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!-- work experience-end -->
+
+<!-- portfolio -->
+<div class="portfolio">
+	<div class="container">
+		<h3 class="tittle ">Portfolio</h3>
+		<div class="portfolio-grids">
+			<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+			<script type="text/javascript">
+				$(document).ready(function () {
+									$('#horizontalTab').easyResponsiveTabs({
+										type: 'default', //Types: default, vertical, accordion
+										width: 'auto', //auto or any width like 600px
+										fit: true   // 100% fit in a container
+									});
+								});
+			</script>
+			<div class="sap_tabs">
+				<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+					<ul class="resp-tabs-list">
+						<li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>All</span></li>
+						<li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>Project</span></li>
+						<li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Demo</span></li>
+					</ul>
+					<div class="resp-tabs-container">
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+							<div class="col-md-3 team-gd ">
+								<div class="thumb">
+									<a href="#portfolioModal1" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/pic4.jpg" alt="">
+									<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd ">
+								<div class="thumb">
+									<a href="#portfolioModal3" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/pic5.jpg" alt="">
+									<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd ">
+								<div class="thumb">
+									<a href="#portfolioModal2" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/pic9.jpg" alt="">
+									<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd ">
+								<div class="thumb">
+									<a href="#portfolioModal4" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/pic6.jpg" alt="">
+									<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd yes_marg ">
+								<div class="thumb">
+									<a href="#portfolioModal5" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/pic10.jpg" alt="">
+									<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd yes_marg ">
+								<div class="thumb">
+									<a href="#portfolioModal6" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/pic11.jpg" alt="">
+									<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd yes_marg ">
+								<div class="thumb">
+									<a href="#portfolioModal7" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/pic13.jpg" alt="">
+									<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd yes_marg ">
+								<div class="thumb">
+									<a href="#portfolioModal8" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/pic14.jpg" alt="">
+									<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+							<div class="col-md-3 team-gd ">
+								<div class="thumb">
+									<a href="#portfolioModal5" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+										<img src="images/1.jpg" alt="">
+										<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd  ">
+								<div class="thumb">
+									<a href="#portfolioModal6" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+										<img src="images/2.jpg" alt="">
+									<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd ">
+								<div class="thumb">
+									<a href="#portfolioModal7" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/3.jpg" alt="">
+									<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd ">
+								<div class="thumb">
+									<a href="#portfolioModal7" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal"><img src="images/4.jpg" alt="">
+										<div class="team_pos">
+											<ul>
+												<li>
+													<div class="morph pic fb_icon1">
+													</div>
+												</li>
+											</ul>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+							<div class="col-md-3 team-gd ">
+								<div class="thumb">
+									<a href="#portfolioModal2" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+										<img src="images/5.jpg" alt="">
+										<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd ">
+								<div class="thumb">
+									<a href="#portfolioModal4" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+										<img src="images/6.jpg" alt="">
+										<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd">
+								<div class="thumb">
+									<a href="#portfolioModal5" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+										<img src="images/7.jpg" alt="">
+									<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-md-3 team-gd">
+								<div class="thumb">
+									<a href="#portfolioModal6" class="portfolio-link b-link-diagonal b-animate-go" data-toggle="modal">
+										<img src="images/8.jpg" alt="">
+									<div class="team_pos">
+										<ul>
+											<li>
+												<div class="morph pic fb_icon1">
+												</div>
+											</li>
+										</ul>
+									</div>
+									</a>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- portfolio-end -->
+
+<!-- contact -->
+<div id="emailme" class="contact">
+	<div class="container">
+		<h3 class="tittle">Contact</h3>
+		<div class="col-md-6 contact-left ">
+			<div class="horizontal-tab">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#tab1" data-toggle="tab" aria-expanded="false">Contact me</a></li>
+					<li class=""><a href="#tab2" data-toggle="tab" aria-expanded="false">Hire me</a></li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active in" id="tab1">
+						<div class="contact-form">
+							<ul>
+								<li><i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>深圳市宝安区, <span>都市翠海.</span></li>
+								<li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">skylin930909@gmail.com</a></li>
+								<li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>18721410594</li>
+							</ul>
+							<form>
+								<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+								<input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+								<textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+								<input type="submit" value="Submit" >
+							</form>
+						</div>
+					 
+					</div>
+					<div class="tab-pane" id="tab2">
+					  <div class="contact-form">
+							<form>
+								<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+								<input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+								<textarea type="text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Description...</textarea>
+								<input id="uploadFile" placeholder="Choose File" disabled="disabled" />
+									<div class="fileUpload btn btn-primary">
+										<span>Upload</span>
+										<input id="uploadBtn" type="file" class="upload" />
+									</div>
+								<input type="submit" value="Send Request" >
+							</form>
+							<script>
+								document.getElementById("uploadBtn").onchange = function () {
+									document.getElementById("uploadFile").value = this.value;
+								};
+							</script>
+						</div>
+					</div>
+					
+				</div>
+            </div>
+		</div>
+		<div class="col-md-6 contact-right ">
+			<iframe src="map.html" frameborder="0" style="border:0"></iframe>
+		</div>
+		<div class="clearfix"></div>
+		<p class="copy-right">&copy 2017 Resume. All rights reserved | Design by <a href="https://github.com/SkyLin0909">Sky_lin</a></p>
+	</div>
+</div>
+<!-- contact-end -->
+
+<script src="js/bootstrap.js"></script>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>Image-Title</h3>
+                        <img src="images/pic4.jpg" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>Image-Title</h3>
+                        <img src="images/pic9.jpg" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>Image-Title</h3>
+                        <img src="images/pic5.jpg" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>Image-Title</h3>
+                        <img src="images/pic6.jpg" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>微聘</h3>
+                        <img src="images/1.jpg" class="img-responsive img-centered" alt="">
+                        <p>使用fullPage构建页面，HTML/CSS实现页面静态展示，
+							使用原生javascript和jQuery完成项目中的一些动态交互效果，
+							reveal.js实现视频弹框.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>PBA美容顾问</h3>
+                        <img src="images/2.jpg" class="img-responsive img-centered" alt="">
+                        <p>该项目是一化妆类型商城网站。向用户商品信息、分类和购买的功能，并且具有社区讨论功能.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>孝感冰娃饮品</h3>
+                        <img src="images/3.jpg" class="img-responsive img-centered" alt="">
+                        <p>该项目是一个较为典型的电商平台，它展示了关于酒类最新产品以及米酒的即时资讯，让用户可以足不出户随时随地购物，了解米酒的最新行情.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+						<h3>Image-Title</h3>
+                        <img src="images/pic14.jpg" class="img-responsive img-centered" alt="">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="portfolio-modal modal fade slideanim" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content port-modal">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl"></div>
+            </div>
+        </div>
+        <div class="container">
+			<div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <div class="modal-body">
+                        <img src="images/pic1.jpg" class="img-responsive img-centered" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--scrolling js-->
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+<!--//scrolling js-->
+<!-- smooth scrolling -->
+<script type="text/javascript">
+	$(document).ready(function() {
+	/*
+		var defaults = {
+		containerID: 'toTop', // fading element id
+		containerHoverID: 'toTopHover', // fading element hover id
+		scrollSpeed: 1200,
+		easingType: 'linear'
+		};
+	*/
+	$().UItoTop({ easingType: 'easeOutQuart' });
+	});
+</script>
+<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
 </body>
 </html>
